@@ -35,4 +35,36 @@ Exemplo de resposta:
 }
 ```
 Caso essa resposta aconteca, isso significa que aconteceu alguma falha durante o processo de autenticacao da requisicao. Motivos: Token invalido, Token expirado.
-### GET /games/:id
+
+### POST /auth
+Esse endpoint e responsavel por fazer o processo de login.
+#### Parametros
+
+Email e Senha
+
+Exemplo:
+```
+{
+  "email": "email do user cadastrado",
+  "password": "senha"
+}
+```
+#### Respostas
+##### OK! 200
+Caso essa resposta aconteca, sera retornado o token.
+Exemplo de resposta:
+```
+{
+  "token": "aisjdoiu3214ei21u3y4uihid.jue12e1e"
+}
+```
+##### Falha na autenticacao! 401
+Caso essa resposta aconteca, isso significa que aconteceu alguma falha durante o processe de autenticacao da requisicao. Motivos: senha ou email incorretos.
+
+Exemplo de resposta:
+
+```
+{
+  "err": "Credenciais Invalidas"
+}
+```
