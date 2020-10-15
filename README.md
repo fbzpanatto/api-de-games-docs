@@ -26,5 +26,13 @@ Exemplo de resposta:
 ]
 ```
 ##### Falha na autenticacao! 401
+
+Exemplo de resposta:
+
+```
+{
+  "err": "Token Invalido"
+}
+```
 Caso essa resposta aconteca, isso significa que aconteceu alguma falha durante o processo de autenticacao da requisicao. Motivos: Token invalido, Token expirado.
 ### GET /games/:id
